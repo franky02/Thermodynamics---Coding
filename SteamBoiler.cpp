@@ -48,7 +48,10 @@ struct Solver {
     double interpolate(double y,double x1,double x2,double y1,double y2) {
         return (((x1 - x2)*(y - y2))/(y1 - y2)) + x2;
     }
+    // double get_value(int x) {
 
+
+    // }
     //Custom bound function - O(log(N))
     double fs1(int s,int e,double x) {
         if(s == e) return p_list[s] <= x ? s : -1;
@@ -294,6 +297,7 @@ int main() {
     //debug() << imie(s.p_list);
 
     double check = (m1dot - m2dot) * (xi - xf);
+    // main condition to handle all cases at once
 
     if(final_pressure != -1 && final_pressure > P2 && final_pressure < P1 && volume > 0 && check < 0) {
         assert(final_pressure > P2 && final_pressure < P1);
